@@ -12,34 +12,48 @@ header{
 }
 #heading1{
     font-family: 'Segoe UI', sans-serif;
-    margin: 10px auto 0 auto;
+    margin: 10px auto 10px auto;
 }
 #add{
+    outline: none;
+    
+    font-family: 'Poppins', sans-serif;
+    font-size: 12pt;
+    
     margin: 10px auto 10px auto;
     border: none;
-    box-shadow: 2px 2px 3px gray, -2px -2px 6px rgb(197, 197, 197);
-    width: 34.2vw;
+    box-shadow: 2px 2px 3px rgba(124, 124, 124, 0.6), -2px -2px 5px rgba(124, 124, 124, 0.3);
+    width: 100%;
     height: 40px;
     padding:1em;
     border-radius: 3px;
+    transition: 250ms ease-in;
+}
+#add:focus{
+    background-color: rgba(124, 124, 124, 0.1); 
 }
 section:nth-last-of-type(1){
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+    width: 90%;
     height: 40vh;
 }
-img:nth-of-type(1){
+#ilust{
     width:600px;
     height: 580px;
 }
 
 .root{
+    border: none;
     border: 1px solid gray;
     padding:15px;
     min-width: 42%;
     border-radius:3px;
     position: relative;
     max-height: 55vh;
+    min-height: 55vh;
     overflow-y: auto;
     overflow-x: hidden;
     margin: 90px auto 0 auto;
@@ -52,7 +66,7 @@ img:nth-of-type(1){
     border-radius: 4px;
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin: 10px auto 0 auto;
     align-items: center;
     border: 1px solid gray;;
     padding: 10px;
@@ -70,4 +84,41 @@ img:nth-of-type(1){
     
 }
 
+@media only screen and (max-width: 1200px){
+   #ilust{
+        display: none;
+    }
+    .todo-text{
+      margin-right: 300px;  
+      margin-right: 400px;  
+    }
+}
 
+@media only screen and (max-width:1024px){
+    body{
+        overflow-y: hidden;
+    }
+    #add{
+        width: 80vw;
+        margin: auto;
+    }
+    .root{
+        min-height: 80vh;
+        overflow-y: auto;
+        border: none;
+        margin: -50px 0 0 0;        
+    }
+    .todo-text{
+      margin-right: 450px;  
+    }
+}
+@media only screen and (max-width: 700px){
+    .todo-text{
+      margin-right: 370px;  
+    }
+}
+@media only screen and (max-width: 500px){
+    .todo-text{
+      margin-right: 200px;  
+    }
+}
