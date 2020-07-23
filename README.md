@@ -1,4 +1,4 @@
-# Today.it
+# Todo.it
 A simple todo app created using jquery. Focuses on being objective<br>
 <br>
 ## Features
